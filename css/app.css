@@ -1,0 +1,152 @@
+html{
+  font-size: 10px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8; 
+}
+[hidden] {
+  display: none !important;
+}
+.container{
+  width: 27rem;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+.players{
+  position: relative;
+  display: flex;
+}
+.players > div{
+  flex: 1;
+  height: 9rem;
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.players .vs{
+  background-size: 60%;
+  background-image: url('../images/vs.png')
+}
+.vue{
+  background-image: url('../images/vue.png')
+}
+.react{
+  background-image: url('../images/react.png')
+}
+.angular{
+  background-image: url('../images/angular.png')
+}
+.players .dice{
+  width: 2.5rem;
+  height: 2.5rem;
+  outline: 0;
+  border: 0;
+  -webkit-appearance: none;
+  position: absolute;
+  bottom: 0.5rem;
+  cursor: pointer;
+  background: url('../images/dice.svg') no-repeat center;
+}
+.players #dice-p1{
+  left: 90px;
+}
+.players #dice-p2{
+  right: 90px;
+}
+#p1, #p2{
+  position: relative;
+}
+.players .caret{
+  position: absolute;
+  top: -10px;
+  left: 3.5rem;
+  opacity: 0.8;
+  border-top: 1rem solid #666;
+  border-left: 1rem solid transparent;
+  border-right: 1rem solid transparent;
+}
+
+.playground{
+  position: relative;
+  margin: 10px 0;
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.row{
+  display: flex;
+  border-bottom: 1px solid #e1e2e3; 
+}
+.square{
+  flex: 1;
+  border-right: 1px solid #e1e2e3; 
+  height: 9rem;
+  cursor: pointer;
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.row .square:last-child{
+  border-right: none; 
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255,255,255,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+.overlay.minimze{
+  transform: scale(0);
+}
+.controls{
+  margin: 3rem 0 2rem;
+  text-align: center
+}
+.btn{
+  width: 100px;
+  height: 36px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  -webkit-appearance: none;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.btn.start{
+  background: #23d87c;
+}
+.btn.reset{
+  background: #ff9800;
+}
+.btn:disabled{
+  background: #ccc;
+  cursor: no-drop;
+}
+.winner {
+  margin-top: -4rem;
+}
+.winner .badge{
+  width: 10rem;
+  margin: 0 auto;
+  display: block;
+}
+.winner .logo{
+  margin-top: -1rem;
+  width: 15rem;
+  height: 15rem;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
